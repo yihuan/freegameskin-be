@@ -8,9 +8,9 @@ const app = new Koa()
 
 const PORT = process.env.PORT || 5314
 
-app.use(bodyParser)
+app.use(bodyParser())
 app.use(cors({ origin: '*' }))
-app.use(logger)
+app.use(logger())
 
 const router = new Router()
 router.get('/', async ctx => {
